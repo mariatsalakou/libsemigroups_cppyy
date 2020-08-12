@@ -186,7 +186,7 @@ class ForwardRange:
         self.last = last
 
     def __repr__(self):
-        return "<forward range at {0}>".format(hex(id(self)), len(self))
+        return "<forward range at {0}>".format(hex(id(self)))
 
     def __iter__(self):
         self.it = self.first
