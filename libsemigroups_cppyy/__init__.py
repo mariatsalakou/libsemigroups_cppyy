@@ -107,6 +107,9 @@ cppyy.cppdef("#define FMT_HEADER_ONLY")
 cppyy.cppdef("#define HPCOMBI_CONSTEXPR_FUN_ARGS")
 
 cppyy.include("libsemigroups/libsemigroups.hpp")
+cppyy.include("libsemigroups/wilo.hpp")
+cppyy.include("libsemigroups/wislo.hpp")
+cppyy.include("libsemigroups/siso.hpp")
 
 cppyy.gbl.libsemigroups
 
@@ -126,6 +129,7 @@ from libsemigroups_cppyy.pperm import *
 from libsemigroups_cppyy.schreier_sims import SchreierSims
 from libsemigroups_cppyy.transf import *
 from libsemigroups_cppyy.todd_coxeter import ToddCoxeter
+from libsemigroups_cppyy.word import number_of_words, cbegin_wilo, cend_wilo, wilo, cbegin_wislo, cend_wislo, wislo, cbegin_sislo, cend_sislo, sislo, cbegin_silo, cend_silo, silo
 
 microseconds = cppyy.gbl.std.chrono.microseconds
 milliseconds = cppyy.gbl.std.chrono.milliseconds
