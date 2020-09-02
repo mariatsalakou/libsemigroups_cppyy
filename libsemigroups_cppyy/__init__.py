@@ -132,7 +132,7 @@ from libsemigroups_cppyy.transf import *
 from libsemigroups_cppyy.todd_coxeter import ToddCoxeter
 
 if compare_version_numbers(libsemigroups_version(), "1.1.0") and not compare_version_numbers("1.3.0", libsemigroups_version()):
-    from libsemigroups_cppyy.word import number_of_words, cbegin_wilo, cend_wilo, wilo, cbegin_wislo, cend_wislo, wislo, cbegin_sislo, cend_sislo, sislo, cbegin_silo, cend_silo, silo
+    from libsemigroups_cppyy.word import number_of_words, wilo, wislo, sislo, silo
 
 microseconds = cppyy.gbl.std.chrono.microseconds
 milliseconds = cppyy.gbl.std.chrono.milliseconds
