@@ -104,14 +104,13 @@ sys.stderr = stderr
 sys.stdout = stdout
 
 cppyy.cppdef("#define FMT_HEADER_ONLY")
+cppyy.cppdef("#define HPCOMBI_CONSTEXPR_FUN_ARGS")
+cppyy.include("libsemigroups/libsemigroups.hpp")
 
 if compare_version_numbers(libsemigroups_version(), "1.1.0") and not compare_version_numbers("1.3.0", libsemigroups_version()):
-     cppyy.cppdef("#define HPCOMBI_CONSTEXPR_FUN_ARGS")
-     cppyy.include("libsemigroups/libsemigroups.hpp")
-
-cppyy.include("libsemigroups/wilo.hpp")
-cppyy.include("libsemigroups/wislo.hpp")
-cppyy.include("libsemigroups/siso.hpp")
+    cppyy.include("libsemigroups/wilo.hpp")
+    cppyy.include("libsemigroups/wislo.hpp")
+    cppyy.include("libsemigroups/siso.hpp")
 
 cppyy.gbl.libsemigroups
 
@@ -128,11 +127,11 @@ from libsemigroups_cppyy.froidure_pin import FroidurePin, right_cayley, left_cay
 from libsemigroups_cppyy.knuth_bendix import KnuthBendix
 from libsemigroups_cppyy.perm import *
 from libsemigroups_cppyy.pperm import *
+from libsemigroups_cppyy.schreier_sims import SchreierSims
+from libsemigroups_cppyy.transf import *
+from libsemigroups_cppyy.todd_coxeter import ToddCoxeter
 
 if compare_version_numbers(libsemigroups_version(), "1.1.0") and not compare_version_numbers("1.3.0", libsemigroups_version()):
-    from libsemigroups_cppyy.schreier_sims import SchreierSims
-    from libsemigroups_cppyy.transf import *
-    from libsemigroups_cppyy.todd_coxeter import ToddCoxeter
     from libsemigroups_cppyy.word import number_of_words, cbegin_wilo, cend_wilo, wilo, cbegin_wislo, cend_wislo, wislo, cbegin_sislo, cend_sislo, sislo, cbegin_silo, cend_silo, silo
 
 microseconds = cppyy.gbl.std.chrono.microseconds
