@@ -27,7 +27,7 @@ class TestSilo(unittest.TestCase):
 
     def test_003(self):
         w = [x for x in silo("ab", 4, "a", "bbbbb")]
-        self.asserEqual(len(w), 14)
+        self.assertEqual(len(w), 14)
         self.assertEqual(w,  ['a','aa','aaa','aab','ab','aba','abb','b','ba','baa','bab','bb','bba','bbb'])
         w = [x for x in silo("ba", 4, "b", "aaaaa")]
         self.assertEqual(w,  ['b','bb','bbb','bba','ba','bab','baa','a','ab','abb','aba','aa','aab','aaa'])
@@ -41,10 +41,10 @@ class TestSilo(unittest.TestCase):
         first = ""
         last = "aaaaaaaaaa"
         w = [x for x in sislo("a", first, last)]
-        self.asserEqual(len(w), 10)
+        self.assertEqual(len(w), 10)
         self.assertEqual(w, ["", "a", "aa", "aaa", "aaaa", "aaaaa", "aaaaaa", "aaaaaaa", "aaaaaaaa", "aaaaaaaaa"])
         w = [x for x in sislo("a", "aa", "aaaa")]
-        self.assertEqual(["aa","aaa"])
+        self.assertEqual(w, ["aa","aaa"])
 
     def test_006(self):
         first = ""

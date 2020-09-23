@@ -15,10 +15,10 @@ class TestWilo(unittest.TestCase):
         self.assertEqual(w2, [[], [0], [1]])
         w3 = [x for x in wilo(2, 1, [], [1,1])]
         self.assertEqual(len(w3), 1)
-        self.assertEqual(w3[0], [])
+        self.assertEqual([x for x in w3[0]], [])
         w4 = [x for x in wilo(2, 1, [], [0])]
         self.assertEqual(len(w4), 1)
-        self.assertEqual(w4[0], [])
+        self.assertEqual([x for x in w4[0]], [])
     def test_002(self):
         w = [ x for x in wilo(2, 4, [0], [1, 1, 1, 1])]
         u = []
