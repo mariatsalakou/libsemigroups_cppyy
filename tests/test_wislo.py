@@ -1,5 +1,5 @@
-import unittest
-from libsemigroups_cppyy import wislo
+import unittest, libsemigroups_cppyy
+from libsemigroups_cppyy import wislo, number_of_words
 
 class WisloTests(unittest.TestCase):
     def test_000(self):

@@ -1,4 +1,4 @@
-import unittest
+import unittest, libsemigroups_cppyy
 from libsemigroups_cppyy import silo, sislo, number_of_words
 
 class TestSilo(unittest.TestCase):
@@ -10,7 +10,7 @@ class TestSilo(unittest.TestCase):
         self.assertEqual(w, ['','a','aa','aaa','aaaa','aaaaa','aaaaaa','aaaaaaa','aaaaaaaa','aaaaaaaaa'])
         w = [x for x in silo("", 10 , "", "aaaaaaaaaa")]
         self.assertEqual(len(w), 1)
-        w = [x for x in silo("a", 4 "aa", v)]
+        w = [x for x in silo("a", 4, "aa", v)]
         self.assertEqual(w, ["aa", "aaa"])
 
     def test_002(self):

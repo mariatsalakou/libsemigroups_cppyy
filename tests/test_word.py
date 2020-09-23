@@ -1,9 +1,9 @@
-import unittest
+import unittest, libsemigroups_cppyy
 from libsemigroups_cppyy import number_of_words
 
 
 class TestNumberOfWords(unittest.TestCase):
-    def test_init(self):
+    def test_000(self):
         self.assertEqual(number_of_words(3, 1, 4), 39)
         self.assertEqual(number_of_words(3, 0, 10), 29524)
         self.assertEqual(number_of_words(2, 5, 6), 32)

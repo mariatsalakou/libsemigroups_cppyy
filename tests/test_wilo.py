@@ -1,7 +1,7 @@
-import unittest
-from libsemigroups_cppyy import wilo
+import unittest, libsemigroups_cppyy
+from libsemigroups_cppyy import wilo, number_of_words
 
-class TestNumberOfWords(unittest.TestCase):
+class TestWilo(unittest.TestCase):
     def test_001(self):
         u = [0, 0, 0, 0]
         v = [1, 1, 1, 1]
@@ -16,7 +16,7 @@ class TestNumberOfWords(unittest.TestCase):
         w3 = [x for x in wilo(2, 1, [], [1,1])]
         self.assertEqual(len(w3), 1)
         self.assertEqual(w3[0], [])
-        w4 = [x for x in wilo(2, 1, [], [0])]s
+        w4 = [x for x in wilo(2, 1, [], [0])]
         self.assertEqual(len(w4), 1)
         self.assertEqual(w4[0], [])
     def test_002(self):
